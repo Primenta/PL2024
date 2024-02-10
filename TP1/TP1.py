@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Ler o arquivo CSV
+# Ler o ficheiro CSV
 df = pd.read_csv('emd.csv')
 
 # Listas para armazenar as modalidades e idades
@@ -27,7 +27,7 @@ for index, linha in df.iterrows():
     else:
         inaptos.append('true')
 
-# Ordenar e obter modalidades únicas
+# Ordenar e unificar modalidades repetidas
 modalidades_unicas = sorted(set(modalidades))
 
 # Calcular a contagem de atletas inaptos
@@ -58,7 +58,7 @@ print("\n***DISTRIBUIÇÃO DOS ATLETAS POR ESCALÃO ETÁRIO!***\n")
 for escalao, count in sorted(escaloes.items()):
     print(f"[{escalao}-{escalao+4}]: {count}")
 
-# Escrever os resultados em um arquivo de texto
+# Escrever os resultados num ficheiro de texto
 with open('result.txt', 'w') as txtfile:
     txtfile.write("***LISTA ORDENADA ALFABETICAMENTE DAS MODALIDADES DESPORTIVAS!***\n\n")
     for modalidade in modalidades_unicas:
