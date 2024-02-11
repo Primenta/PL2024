@@ -1,0 +1,29 @@
+***LISTA ORDENADA ALFABETICAMENTE DAS MODALIDADES DESPORTIVAS!***
+
+Andebol
+Atletismo
+BTT
+Badminton
+Basquetebol
+Ciclismo
+Dança
+Equitação
+Esgrima
+Futebol
+Karaté
+Orientação
+Parapente
+Patinagem
+Triatlo
+
+***PERCENTAGEM DE ATLETAS APTOS E INAPTOS PARA A PRÁTICA DESPORTIVA!***
+
+54.00% dos atletas estão aptos.
+46.00% dos atletas estão inaptos.
+
+***DISTRIBUIÇÃO DOS ATLETAS POR ESCALÃO ETÁRIO!***
+
+[20-24]: 80
+[25-29]: 102
+[30-34]: 104
+[35-39]: 14
