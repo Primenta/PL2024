@@ -10,16 +10,20 @@ def markdown_to_html(markdown):
     markdown = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', markdown)
 
     # Italic
-    markdown = re.sub(r'__(.*?)__', r'<em>\1</em>', markdown)
+    markdown = re.sub(r'\*(.*?)\*', r'<em>\1</em>', markdown)
 
     # Blockquote
     markdown = re.sub(r'^>(.*)$', r'<blockquote>\1</blockquote>', markdown, flags=re.MULTILINE)
 
     # Ordered list
-    markdown = re.sub(r'(?<=\n)(\d+\. .*?)(?=\n)', r'<ol>\n<li>\1</li>\n</ol>', markdown)
+    markdown = re.sub(r'(?m)^\d+\. .*$', r'<li>\g<0></li>', markdown)
+    if re.search(r'\d+\.', markdown):
+        markdown = '<ol>\n' + markdown + '\n</ol>'
 
     # Unordered list
-    markdown = re.sub(r'(?<=\n)([*-] .*?)(?=\n)', r'<ul>\n<li>\1</li>\n</ul>', markdown)
+    markdown = re.sub(r'(?m)^-\s(.*)$', r'<li>\1</li>', markdown)
+    if re.search(r'\s(.*)', markdown, flags=re.MULTILINE):
+        markdown = '<ul>\n' + markdown + '\n</ul>'
 
     # Code
     markdown = re.sub(r'`(.*?)`', r'<code>\1</code>', markdown)
