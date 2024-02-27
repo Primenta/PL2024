@@ -1,0 +1,18 @@
+1 eryeon 1 1 aaaoff
+1 1 asdonasdas
+1 1 1 kgjfoffasd
+on 1 1
+1 1 off 1
+1 on 1 1 1 1
+1 1 off
+1 1 1 on
+1 1 1 off
+1 on 1
+1 1 1 1 off
+1 1 on
+1 1 off 1
+1 1 1 on
+1 1 1 off
+1 1 1 1 on
+1 1 off
+
