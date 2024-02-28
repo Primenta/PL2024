@@ -1,12 +1,13 @@
 import sys
+import re
 
 def process_input(user_input, count, aux):
     for word in user_input:
         if word.lower() == "quit":
             sys.exit(0)
-        elif word.lower() == "off" or "off" in word.lower():
+        elif word.lower() == "off" or re.search(r"off", word):
             aux = False
-        elif word.lower() == "on" or "on" in word.lower():
+        elif word.lower() == "on" or re.search(r"on", word):
             aux = True
         elif word.lower() == "=":
             print(count)
@@ -14,6 +15,7 @@ def process_input(user_input, count, aux):
             if word.isdigit():
                 count += int(word)
     return count, aux
+
 
 def main():
     count = 0
@@ -26,7 +28,10 @@ def main():
                 for line in file:
                     line_input = line.strip().split()
                     count, aux = process_input(line_input, count, aux)
-                print(count)
+                print("Conteudo adicionado ao output.")
+            with open("output.txt", 'a') as f:
+                f.write("Resultado final do ficheiro " + file_path + " é " + str(count) + ".")
+                
         except FileNotFoundError:
             print("Ficheiro não encontrado:", file_path)
             sys.exit(1)
