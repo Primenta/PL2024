@@ -3,8 +3,8 @@
 
 ## Autor
 
-- Pedro Miguel Costa Azevedo
-- A100557
+- Miguel Tomás Antunes Pinto
+- A100815
 
 
 ## Descrição Geral
